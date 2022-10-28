@@ -56,7 +56,7 @@
     </div>
     <div>
         <ul class="lista">
-            <li v-for="fruta in arrayFrutales" :key="name">
+            <li v-for="fruta in arrayFrutales" :key="fruta.name">
                 {{fruta.name}} - {{fruta.price}} - {{fruta.descripcion}}
             </li>
         </ul>

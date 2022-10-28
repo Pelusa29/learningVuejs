@@ -37,6 +37,11 @@ const router = createRouter({
       name: "reactive",
       component:() => import("../views/ReactivoView.vue"),
     },
+    {
+      path: "/prUno",
+      name: "prUno",
+      component:() => import("../views/Practica1View.vue"),
+    },
   ],
 });
 

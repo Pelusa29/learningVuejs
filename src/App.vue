@@ -23,6 +23,7 @@ import HelloWorld from "./components/HelloWorld.vue";
         <RouterLink to="/cicles">Page Repetitive Cicles</RouterLink>
         <RouterLink to="/events">Pratice Events</RouterLink>
         <RouterLink to="/reactive">Var Reactive</RouterLink>
+        <RouterLink to="/prUno">Practica 1</RouterLink>
       </nav>
     </div>
   </header>
