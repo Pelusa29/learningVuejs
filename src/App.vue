@@ -15,16 +15,30 @@ import HelloWorld from "./components/HelloWorld.vue";
 
     <div class="wrapper">
       <HelloWorld msg="Aprendiendo VUE JS 3" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/practice">Page Practice</RouterLink>
-        <RouterLink to="/cicles">Page Repetitive Cicles</RouterLink>
-        <RouterLink to="/events">Pratice Events</RouterLink>
-        <RouterLink to="/reactive">Var Reactive</RouterLink>
-        <RouterLink to="/prUno">Practica 1</RouterLink>
-      </nav>
+        <nav class="navbar">
+           <ul class="nav-links">
+              <div class="menu">
+                <li><RouterLink to="/">Home</RouterLink></li>
+                <li class="services">
+                  <a href="/">Tomo I</a>
+                  <ul class="dropdown">
+                      <li><RouterLink to="/about">About</RouterLink></li>
+                      <li><RouterLink to="/practice">Practice</RouterLink></li>
+                      <li><RouterLink to="/cicles">Cicles</RouterLink></li>
+                      <li><RouterLink to="/events">Eventos</RouterLink></li>
+                      <li><RouterLink to="/reactive">Reactive</RouterLink></li>
+                      <li><RouterLink to="/prUno">Practica 1</RouterLink></li>
+                  </ul>
+                </li>
+                <li class="services">
+                  <a href="/">Tomo II</a>
+                  <ul class="dropdown">
+                    <li><RouterLink to="/">Computed</RouterLink></li>
+                  </ul>
+                </li>
+              </div>
+           </ul>
+        </nav>
     </div>
   </header>
 
@@ -41,31 +55,63 @@ header {
   display: block;
   margin: 0 auto 2rem;
 }
+li {
+ list-style: none;
+}
 
-nav {
-  width: 100%;
-  font-size: 12px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #00805a;
+  color: #fff;
+  border-radius: 5px 5px 5px 5px;
+}
+.nav-links a {
+  color: #fff;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1px 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 30px;
+}
+.dropdown li + li {
+  margin-top: 5px;
+}
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
   text-align: center;
-  margin-top: 2rem;
+}
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+  display: block;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
 
 @media (min-width: 1024px) {
   header {
