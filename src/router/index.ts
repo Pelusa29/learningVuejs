@@ -42,6 +42,11 @@ const router = createRouter({
       name: "prUno",
       component:() => import("../views/Practica1View.vue"),
     },
+    {
+      path: "/computed",
+      name: "computed",
+      component:() => import("../views/ComputadoView.vue"),
+    },
   ],
 });
 
