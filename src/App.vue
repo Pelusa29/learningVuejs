@@ -33,7 +33,7 @@ import HelloWorld from "./components/HelloWorld.vue";
                 <li class="services">
                   <a href="/">Tomo II</a>
                   <ul class="dropdown">
-                    <li><RouterLink to="/">Computed</RouterLink></li>
+                    <li><RouterLink to="/computed">Computed</RouterLink></li>
                   </ul>
                 </li>
               </div>
