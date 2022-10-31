@@ -47,6 +47,11 @@ const router = createRouter({
       name: "computed",
       component:() => import("../views/ComputadoView.vue"),
     },
+    {
+      path: "/prDos",
+      name: "prDos",
+      component:() => import("../views/Practica2View.vue"),
+    },
   ],
 });
 
