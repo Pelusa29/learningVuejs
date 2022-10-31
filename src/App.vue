@@ -34,6 +34,7 @@ import HelloWorld from "./components/HelloWorld.vue";
                   <a href="/">Tomo II</a>
                   <ul class="dropdown">
                     <li><RouterLink to="/computed">Computed</RouterLink></li>
+                    <li><RouterLink to="/prDos">Practica 2</RouterLink></li>
                   </ul>
                 </li>
               </div>
